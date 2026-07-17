@@ -20,7 +20,7 @@
    - 任务进行时在仓库创建或更新对应的 task-<issue-number>.md（或 task-<短 id>.md）。
 
 2. 记忆管理（文件为真）
-   - long-term（长期记忆）：memory/long/*.md 保存稳定知识（偏好、角色定义、长期项目说明、常用命令、对外凭据存放位置索引）。写入时给出来源与日期。仅在信息可信且长期有效时写入。
+   - long-term（长期记忆）：memory/long/*.md 保存稳定知识（偏好、角色定义、长期项目说明、常用命令、对外凭据存放位置索引）。写入时给出来源与日期引用。
    - daily（当日/临时）：memory/daily/YYYY-MM-DD.md 用于当日活动日志、临时发现、短期决策。每天追加，不随意合并到长期记忆，除非明确整理。
    - tasks（任务笔记）：memory/tasks/task-<id>.md 保存任务执行过程、关键决策、重要摘录与结论，任务完成后摘要合并到 long-term（如适用）。
    - soul/metadata：memory/agent_profile.json 保存 agent 的身份元数据（version、role、contact、默认行为偏好）。
@@ -43,11 +43,11 @@
    - 在仓库根目录追加或更新 AGENTS.md 的最近操作摘要（自动/手动，视权限）。
 
 5. 权限与秘密数据
-   - 不在仓库中存放明文秘密（API keys、私密 token）。只保留凭据索引（例如记下在哪个 secret 管理或页面可见）。如确需保留示例，使用占位符或加密后的片段，并在 memory/long/credentials_index.md 记录访问方法与权限。
+   - 不在仓库中存放明文秘密（API keys、私密 token）。只保留凭据索引（例如记下在哪个 secret 管理或页面可见）。如确需保留示例，使用占位符或加密方式。
 
 如何在新 Copilot 会话中继续使用同一角色与记忆
 
-- 约定入口：在新会话中，首先打开并读取仓库的 AGENTS.md + memory/agent_profile.json（如存在），并读取最近 7 天的 memory/daily/*.md 与正在进行的 memory/tasks/*.md。
+- 约定入口：在新会话中，首先打开并读取仓库的 AGENTS.md + memory/agent_profile.json（如存在），并读取最近 7 天的 memory/daily/*.md 与正在进行的 memory/tasks/*.md 列表。
 - 最小上下文带入：把 agent_profile.json 的 summary + 任务 Issue 链接 + task-<id>.md 的要点粘贴到新对话，提示 Copilot 以该角色继续工作。
 - 如果你（用户）没有粘贴上下文，agent 会主动在仓库中生成“会话摘要”文件 memory/sessions/session-<timestamp>.md，供用户复制到新会话中带入上下文。
 
@@ -59,11 +59,5 @@
 
 ---
 
-下面会创建或更新仓库内最小的记忆文件与 agent 配置（AGENTS.md 为核心），包括：
-- MEMORY.md（记忆结构说明）
-- memory/README.md（内目录说明）
-- memory/agent_profile.json（Agent 元数据）
-
-我现在把这些文件写入仓库，作为初始化。随后我会：
-- 在 memory/ 中创建示例 daily 文件（当天）并记录本次初始化动作
-- 在仓库根创建一个 Issue 模板（建议）——如你同意我会继续创建
+## 最近操作摘要
+- 2026-07-17: 初始化个人 AI 工作空间 — 新增 memory/agent_profile.json、memory/daily/2026-07-17.md、.github/ISSUE_TEMPLATE/agent-task.md；变更已提交到分支 `copilot/init-workspace`，等待 PR 审核。

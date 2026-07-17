@@ -1,0 +1,42 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+20:32:38.283 [main] INFO  com.rk.agent.llm.LlmApplication - Starting LlmApplication v1.0.0-SNAPSHOT using Java 21.0.11 with PID 39548 (C:\Users\Lenovo\projects\agent-platform\agent-platform-llm\target\agent-platform-llm-boot.jar started by Lenovo in C:\Users\Lenovo\.mavis\sessions\mvs_7dbf898cae424993b87e89d7b7be564b\workspace)
+20:32:38.288 [main] DEBUG com.rk.agent.llm.LlmApplication - Running with Spring Boot v3.2.2, Spring v6.1.3
+20:32:38.290 [main] INFO  com.rk.agent.llm.LlmApplication - No active profile set, falling back to 1 default profile: "default"
+20:32:50.957 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.rk.agent.**.mapper]' package. Please check your configuration.
+20:32:50.968 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.rk.agent.llm.mapper]' package. Please check your configuration.
+20:33:01.939 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9084 (http)
+20:33:01.999 [main] INFO  o.a.c.core.AprLifecycleListener - An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+20:33:02.000 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+20:33:02.047 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+20:33:02.134 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:33:02.141 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+20:33:02.431 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:33:02.446 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24000 ms
+20:33:05.273 [main] DEBUG c.r.a.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+20:33:14.346 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8351b88d-f986-4d12-8175-eb2a3eba2e5a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+20:33:18.251 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+20:33:19.859 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+20:33:20.774 [main] INFO  org.redisson.Version - Redisson 3.27.2
+20:33:23.320 [redisson-netty-1-5] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for localhost/127.0.0.1:6379
+20:33:23.849 [redisson-netty-1-20] INFO  o.r.connection.ConnectionsHolder - 24 connections initialized for localhost/127.0.0.1:6379
+20:33:24.302 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+20:33:24.556 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8d52313, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64f49b3, org.springframework.security.web.context.SecurityContextHolderFilter@41f61188, org.springframework.security.web.header.HeaderWriterFilter@5a23b9d1, org.springframework.web.filter.CorsFilter@23e3a27f, org.springframework.security.web.authentication.logout.LogoutFilter@68a97fc1, com.rk.agent.common.security.JwtAuthenticationFilter@7f2c995b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@380e3122, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eb94590, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70869678, org.springframework.security.web.session.SessionManagementFilter@7668f8fd, org.springframework.security.web.access.ExceptionTranslationFilter@5c41f6a0, org.springframework.security.web.access.intercept.AuthorizationFilter@6d57b264]
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.5 
+20:33:31.660 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9084 (http) with context path ''
+20:33:31.811 [main] INFO  com.rk.agent.llm.LlmApplication - Started LlmApplication in 54.513 seconds (process running for 55.855)

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.rk.agent</groupId>
+        <artifactId>agent-platform-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../agent-platform-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>agent-platform-llm</artifactId>
+    <name>agent-platform-llm</name>
+    <description>LLM 适配层 :9084</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rk.agent</groupId>
+            <artifactId>agent-platform-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp-sse</artifactId>
+            <version>4.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.rk.agent.llm.LlmApplication</mainClass>
+                    <!-- 可执行 fat jar 用 boot 后缀，原始 jar 保持普通 class jar（供其他模块依赖） -->
+                    <classifier>boot</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

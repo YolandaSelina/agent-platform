@@ -1,0 +1,112 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2026-07-16 22:06:17.669 [main] INFO  [] com.rk.agent.auth.AuthApplication - Starting AuthApplication v1.0.0-SNAPSHOT using Java 21.0.11 with PID 33640 (C:\Users\Lenovo\projects\agent-platform\agent-platform-auth\target\agent-platform-auth-boot.jar started by Lenovo in C:\Users\Lenovo\projects\agent-platform\agent-platform-auth)
+2026-07-16 22:06:17.683 [main] DEBUG [] com.rk.agent.auth.AuthApplication - Running with Spring Boot v3.2.2, Spring v6.1.3
+2026-07-16 22:06:17.688 [main] INFO  [] com.rk.agent.auth.AuthApplication - The following 1 profile is active: "dev"
+2026-07-16 22:06:33.915 [main] WARN  [] o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.rk.agent.auth.mapper.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2026-07-16 22:06:33.915 [main] WARN  [] o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.rk.agent.auth.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2026-07-16 22:06:33.922 [main] WARN  [] o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.rk.agent.auth.mapper.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+2026-07-16 22:06:33.928 [main] WARN  [] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.rk.agent.auth.mapper]' package. Please check your configuration.
+2026-07-16 22:06:45.695 [main] INFO  [] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9081 (http)
+2026-07-16 22:06:45.734 [main] INFO  [] o.a.c.core.AprLifecycleListener - An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2026-07-16 22:06:45.738 [main] INFO  [] o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2026-07-16 22:06:45.753 [main] INFO  [] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2026-07-16 22:06:45.809 [main] INFO  [] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-16 22:06:45.816 [main] INFO  [] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-07-16 22:06:46.166 [main] INFO  [] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-16 22:06:46.182 [main] INFO  [] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 28308 ms
+2026-07-16 22:06:48.739 [main] DEBUG [] c.r.a.c.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-07-16 22:06:51.925 [main] INFO  [] c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2026-07-16 22:06:54.427 [main] INFO  [] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Initialization Sequence datacenterId:28 workerId:12
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.5 
+Can not find table primary key in Class: "com.rk.agent.auth.entity.SysUserRole".
+2026-07-16 22:06:57.483 [main] WARN  [] c.b.m.c.injector.DefaultSqlInjector - class com.rk.agent.auth.entity.SysUserRole ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2026-07-16 22:07:00.793 [main] WARN  [] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f6b878b6-348d-47ba-8968-491bbb8f8f26
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-16 22:07:03.646 [main] INFO  [] org.redisson.Version - Redisson 3.27.2
+2026-07-16 22:07:08.993 [redisson-netty-1-6] INFO  [] o.r.connection.ConnectionsHolder - 1 connections initialized for localhost/127.0.0.1:6379
+2026-07-16 22:07:09.846 [redisson-netty-1-20] INFO  [] o.r.connection.ConnectionsHolder - 24 connections initialized for localhost/127.0.0.1:6379
+2026-07-16 22:07:11.029 [main] INFO  [] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-07-16 22:07:11.383 [main] INFO  [] o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14d6ede3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3333245e, org.springframework.security.web.context.SecurityContextHolderFilter@2f11d889, org.springframework.security.web.header.HeaderWriterFilter@66b3eab0, org.springframework.web.filter.CorsFilter@147c4523, org.springframework.security.web.authentication.logout.LogoutFilter@41538150, com.rk.agent.common.security.JwtAuthenticationFilter@5cbe95b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@159408a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3146f3d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@551725e4, org.springframework.security.web.session.SessionManagementFilter@7699e60a, org.springframework.security.web.access.ExceptionTranslationFilter@3bc33ad9, org.springframework.security.web.access.intercept.AuthorizationFilter@7bdf8c92]
+2026-07-16 22:07:16.135 [main] INFO  [] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9081 (http) with context path ''
+2026-07-16 22:07:16.194 [main] INFO  [] com.rk.agent.auth.AuthApplication - Started AuthApplication in 59.881 seconds (process running for 61.077)
+2026-07-16 22:08:04.956 [http-nio-9081-exec-1] INFO  [] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16 22:08:04.957 [http-nio-9081-exec-1] INFO  [] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-16 22:08:04.958 [http-nio-9081-exec-1] INFO  [] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94bcd77] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT * FROM sys_user WHERE username = ? AND deleted = 0 LIMIT 1
+==> Parameters: admin(String)
+<==    Columns: id, username, nickname, email, phone, avatar, password, status, last_login_time, last_login_ip, create_time, update_time, deleted
+<==        Row: 1, admin, 系统管理员, admin@rk-agent.local, null, null, $2b$10$ktrd93jY46iAHFl4c9XFc.fhSfXkfxg1r19R9C/wT/.0P2qZoYk0O, 1, 2026-07-16 21:51:37, 127.0.0.1, 2026-07-15 17:23:34, 2026-07-16 21:51:37, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@94bcd77]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a01d2f2] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: UPDATE sys_user SET last_login_time=?, last_login_ip=?, update_time=? WHERE id=? AND deleted=0
+==> Parameters: 2026-07-16T22:08:36.625606300(LocalDateTime), 127.0.0.1(String), 2026-07-16T22:08:36.772421900(LocalDateTime), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a01d2f2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20be4570] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT user_id,role_id FROM sys_user_role WHERE (user_id = ?)
+==> Parameters: 1(Long)
+<==    Columns: user_id, role_id
+<==        Row: 1, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20be4570]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dc08947] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT id,code,name,description,create_time,update_time,deleted FROM sys_role WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 1(Long)
+<==    Columns: id, code, name, description, create_time, update_time, deleted
+<==        Row: 1, ADMIN, 系统管理员, 拥有所有权限, 2026-07-15 17:23:34, 2026-07-15 17:23:34, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dc08947]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a252406] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT * FROM sys_user WHERE username = ? AND deleted = 0 LIMIT 1
+==> Parameters: admin(String)
+<==    Columns: id, username, nickname, email, phone, avatar, password, status, last_login_time, last_login_ip, create_time, update_time, deleted
+<==        Row: 1, admin, 系统管理员, admin@rk-agent.local, null, null, $2b$10$ktrd93jY46iAHFl4c9XFc.fhSfXkfxg1r19R9C/wT/.0P2qZoYk0O, 1, 2026-07-16 22:08:37, 127.0.0.1, 2026-07-15 17:23:34, 2026-07-16 22:08:37, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a252406]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e07adc4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT user_id,role_id FROM sys_user_role WHERE (user_id = ?)
+==> Parameters: 1(Long)
+<==    Columns: user_id, role_id
+<==        Row: 1, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e07adc4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb8a36f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26048226] will not be managed by Spring
+==>  Preparing: SELECT id,code,name,description,create_time,update_time,deleted FROM sys_role WHERE id IN ( ? ) AND deleted=0
+==> Parameters: 1(Long)
+<==    Columns: id, code, name, description, create_time, update_time, deleted
+<==        Row: 1, ADMIN, 系统管理员, 拥有所有权限, 2026-07-15 17:23:34, 2026-07-15 17:23:34, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb8a36f]

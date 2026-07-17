@@ -1,0 +1,40 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: agent-platform-api
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.actuate.autoconfigure.jdbc.DataSourceHealthContributorAutoConfiguration
+      - com.alibaba.druid.spring.boot3.autoconfigure.DruidDataSourceAutoConfigure
+  main:
+    web-application-type: servlet
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+# API gateway 不连 DB / Redis，只做路由聚合
+# 实际使用中：前端通过 Vite proxy 或 Nginx 转发到各服务
+# 这里暴露 OpenAPI 聚合视图
+
+agent:
+  jwt:
+    secret: agent-platform-default-secret-please-change-in-production-32bytes
+    expire: 86400
+    header: Authorization
+    prefix: "Bearer "
+
+logging:
+  level:
+    com.rk.agent: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"

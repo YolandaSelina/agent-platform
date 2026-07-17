@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.rk.agent</groupId>
+        <artifactId>agent-platform-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../agent-platform-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>agent-platform-api</artifactId>
+    <name>agent-platform-api</name>
+    <description>统一 API 网关 :9080（仅依赖 common，运行时通过 HTTP 代理到其他服务）</description>
+
+    <dependencies>
+        <!-- API 网关只依赖 common；其他服务通过 HTTP 访问 -->
+        <dependency>
+            <groupId>com.rk.agent</groupId>
+            <artifactId>agent-platform-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.rk.agent.api.ApiApplication</mainClass>
+                    <classifier>boot</classifier>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

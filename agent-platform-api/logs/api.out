@@ -1,0 +1,36 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+22:06:19.008 [main] INFO  com.rk.agent.api.ApiApplication - Starting ApiApplication v1.0.0-SNAPSHOT using Java 21.0.11 with PID 6264 (C:\Users\Lenovo\projects\agent-platform\agent-platform-api\target\agent-platform-api-boot.jar started by Lenovo in C:\Users\Lenovo\projects\agent-platform\agent-platform-api)
+22:06:19.024 [main] INFO  com.rk.agent.api.ApiApplication - The following 1 profile is active: "dev"
+22:06:35.064 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.rk.agent.**.mapper]' package. Please check your configuration.
+22:06:43.008 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9080 (http)
+22:06:43.116 [main] INFO  o.a.c.core.AprLifecycleListener - An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+22:06:43.116 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+22:06:43.187 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+22:06:43.677 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:06:43.678 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+22:06:44.367 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:06:44.378 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24153 ms
+22:06:51.679 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 60a36d1e-298c-4c96-983a-71b88396ff8e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+22:06:56.490 [main] INFO  org.redisson.Version - Redisson 3.27.2
+22:07:03.002 [redisson-netty-1-5] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for localhost/127.0.0.1:6379
+22:07:03.626 [redisson-netty-1-20] INFO  o.r.connection.ConnectionsHolder - 24 connections initialized for localhost/127.0.0.1:6379
+22:07:04.822 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+22:07:05.195 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29394966, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@343727b5, org.springframework.security.web.context.SecurityContextHolderFilter@361b3ca6, org.springframework.security.web.header.HeaderWriterFilter@6f7b8ae1, org.springframework.web.filter.CorsFilter@18dafd3b, org.springframework.security.web.authentication.logout.LogoutFilter@62c6db99, com.rk.agent.common.security.JwtAuthenticationFilter@3b6c2be6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@de63949, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@363fe35a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2954c429, org.springframework.security.web.session.SessionManagementFilter@6e6c8854, org.springframework.security.web.access.ExceptionTranslationFilter@2c4be45f, org.springframework.security.web.access.intercept.AuthorizationFilter@6da9541c]
+22:07:13.245 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9080 (http) with context path ''
+22:07:13.331 [main] INFO  com.rk.agent.api.ApiApplication - Started ApiApplication in 56.245 seconds (process running for 57.965)
+22:07:21.609 [http-nio-9080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:07:21.609 [http-nio-9080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:07:21.612 [http-nio-9080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms

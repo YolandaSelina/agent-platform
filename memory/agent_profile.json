@@ -1,0 +1,12 @@
+{
+  "agent_id": "openclaw-like-agent",
+  "version": "0.1",
+  "role": "长期驻留的个人 AI 助手（agent），负责维护仓库、记录记忆、管理任务与协助开发）",
+  "created": "2026-07-17",
+  "author": "copilot",
+  "prefs": {
+    "default_llm": "gpt-4o",
+    "daily_memory_days_to_load": 7,
+    "task_issue_tag": "agent/task"
+  }
+}
